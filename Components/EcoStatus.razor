@@ -1,0 +1,78 @@
+<div class="card @(MetaAtingida ? "meta" : "")">
+
+<h4>@Titulo</h4>
+
+<p>Pontos por ação: <strong>@PesoAcao</strong></p>
+<p>Total acumulado: <strong>@Total</strong></p>
+
+<div class="barra-container">
+    <div class="barra" style="width:@Progresso%"></div>
+</div>
+
+<button @onclick="RegistrarAcao">
+Registrar Atividade
+</button>
+
+@if(MetaAtingida)
+{
+<p class="mensagem">
+🌱 Meta batida! Você é um Herói do Planeta!
+</p>
+}
+
+</div>
+
+@code{
+
+[Parameter]
+public string Titulo {get; set;}
+
+[Parameter]
+public int PesoAcao {get; set;}
+
+int Total = 0;
+
+void RegistrarAcao()
+{
+    Total += PesoAcao;
+}
+
+bool MetaAtingida => Total >=100;
+
+int Progresso => Total >=100 ? 100 : Total;
+
+}
+
+<style>
+.card{
+border:1px solid #ccc;
+padding:20px;
+width:240px;
+border-radius:10px;
+}
+
+.meta{
+border:2px solid green;
+}
+
+.barra-container{
+width:100%;
+height:18px;
+background:#ddd;
+margin:10px 0;
+}
+
+.barra{
+height:18px;
+background:green;
+}
+
+button{
+padding:10px;
+}
+
+.mensagem{
+color:green;
+font-weight:bold;
+}
+</style>
