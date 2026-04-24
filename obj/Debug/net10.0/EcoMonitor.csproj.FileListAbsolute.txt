@@ -83,3 +83,4 @@ C:\Users\claudio.martins\Desktop\LabDotnet\EcoMonitor\obj\Debug\net10.0\refint\E
 C:\Users\claudio.martins\Desktop\LabDotnet\EcoMonitor\obj\Debug\net10.0\EcoMonitor.pdb
 C:\Users\claudio.martins\Desktop\LabDotnet\EcoMonitor\obj\Debug\net10.0\EcoMonitor.genruntimeconfig.cache
 C:\Users\claudio.martins\Desktop\LabDotnet\EcoMonitor\obj\Debug\net10.0\ref\EcoMonitor.dll
+C:\Users\claudio.martins\Desktop\LabDotnet\EcoMonitor\obj\Debug\net10.0\EcoMonitor.sourcelink.json
